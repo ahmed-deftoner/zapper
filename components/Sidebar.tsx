@@ -39,7 +39,7 @@ const Sidebar = () => {
                         </div>
                         <Discover/>
                         <SuggestedAccounts/>
-                        <footer/>
+                        <Footer/>
                     </div>
              )}
         </div>

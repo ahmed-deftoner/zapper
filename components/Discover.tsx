@@ -22,7 +22,7 @@ const Discover: NextPage = () => {
           <Link href={`/?topic=${item.name}`} key={item.name}>
             <div className={topic === item.name ? activeTopicStyle : topicStyle}>
          
-              <span className={`font-medium text-md hidden md:block capitalize`}>
+              <span className={`font-medium text-md sm:font-normal md:block capitalize`}>
                 {item.name}
               </span>
             </div>
