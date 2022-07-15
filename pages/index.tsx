@@ -13,7 +13,7 @@ const Home = ({videos} : IProps) => {
     <div className='flex flex-col gap-10 videos h-full'>
       {videos.length 
         ? videos?.map((video: Video) => (
-          <VideoCard post={video} isShowingOnHome key={video._id} />
+          <VideoCard post={video} />
         )) 
         : <NoResults text={`No Videos`} />}
     </div>
