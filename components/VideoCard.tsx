@@ -22,14 +22,15 @@ const VideoCard:NextPage<IProps> = ({post}) => {
         <div className='md:w-16 md:h-16 w-10 h-10'>
           <Link href={`/`}>
             <>
-              <img
-                src={'https://cdn.sanity.io/images/4xr89bmp/production/'+post.postedBy.image}
-                width={62}
-                height={62}
-                className=' rounded-full'
-                alt='user-profile'
-                
-              />
+            <Image
+                   loader={()=>post.postedBy.image}
+                  width={62}
+                  height={62}
+                  className=' rounded-full'
+                  src={post.postedBy.image}
+                  alt='user-profile'
+                  layout='responsive'
+                />
             </>
           </Link>
         </div>
