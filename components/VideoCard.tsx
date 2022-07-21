@@ -40,16 +40,27 @@ const VideoCard:NextPage<IProps> = ({post}) => {
                   {post.postedBy.userName}{' '}
                   <GoVerified className='text-blue-400 text-md' />
                 </p>
-                <p className='capitalize font-medium text-xs text-gray-500 hidden md:block'>
-                  {post.postedBy.userName}
-                </p>
               </div>
             </Link>
-          
           </div>
         </div>
+      </div>
+      <div className='lg:ml-20 flex gap-4 relative'>
+        <div
+          onMouseEnter={() => {}}
+          onMouseLeave={() => {}}
+          className='rounded-3xl'
+        >
+          <Link href={"/"}>
+            <video
+              loop
+              src={post.video.asset.url}
+              className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-gray-100'
+            ></video>
+          </Link>
+          </div>
         </div>
-        </div>
+    </div>
   )
 }
 
