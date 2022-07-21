@@ -63,8 +63,8 @@ const VideoCard:NextPage<IProps> = ({post}) => {
       </div>
       <div className='lg:ml-20 flex gap-4 relative'>
         <div
-          onMouseEnter={() => {}}
-          onMouseLeave={() => {}}
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
           className='rounded-3xl'
         >
           <Link href={"/"}>
@@ -72,11 +72,11 @@ const VideoCard:NextPage<IProps> = ({post}) => {
               loop
               ref={videoRef}
               src={post.video.asset.url}
-              className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-gray-100'
+              className='lg:w-[500px] h-[300px] md:h-[350px] lg:h-[438px] w-[200px] rounded-2xl cursor-pointer bg-gray-100'
             ></video>
           </Link>
           {isHover && (
-            <div >
+            <div className='absolute bottom-6 cursor-pointer left-8 md:left-15 lg:left-0 flex gap-7 lg:justify-between w-[100px] md:w-[50px] lg:w-[500px] p-3'>
               {playing ? (
                 <button onClick={onVideoPress}>
                   <BsFillPauseFill className='text-black text-2xl lg:text-4xl' />
