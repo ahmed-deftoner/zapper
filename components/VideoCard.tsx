@@ -23,7 +23,6 @@ const VideoCard:NextPage<IProps> = ({post}) => {
           <Link href={`/`}>
             <>
             <Image
-                   loader={()=>post.postedBy.image}
                   width={62}
                   height={62}
                   className=' rounded-full'
